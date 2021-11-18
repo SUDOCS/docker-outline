@@ -8,9 +8,8 @@ services:
       POSTGRES_USER: ${DOCKER_POSTGRES_USER}
       POSTGRES_PASSWORD: ${DOCKER_POSTGRES_PASS}
       POSTGRES_DB: ${DOCKER_POSTGRES_DBNAME}
+      TZ: Asia/Shanghai
     volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
       - ./data/pgdata:/var/lib/postgresql/data
     restart: always
     networks:

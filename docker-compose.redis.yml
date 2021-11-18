@@ -14,8 +14,6 @@ services:
     environment:
       TZ: Asia/Shanghai
     volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
       - ./data/redis:/data
     logging:
       driver: "json-file"
